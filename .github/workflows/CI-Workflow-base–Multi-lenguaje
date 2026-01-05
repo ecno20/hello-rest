@@ -1,0 +1,60 @@
+name: CI - Multi Language
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: CI Pipeline
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [java, node, rust, python, go, javascript]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        run: echo "Language=${{ matrix.language }}"
+
+      - name: Run build & tests
+        run: |
+          set -e
+
+          if [ "${{ matrix.language }}" = "java" ]; then
+            mvn -B test
+
+          elif [ "${{ matrix.language }}" = "node" ]; then
+            npm ci
+            npm test
+
+          elif [ "${{ matrix.language }}" = "rust" ]; then
+            cargo test
+
+          elif [ "${{ matrix.language }}" = "python" ]; then
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+            pytest
+
+          elif [ "${{ matrix.language }}" = "go" ]; then
+            go test ./...
+
+          elif [ "${{ matrix.language }}" = "javascript" ]; then
+            node index.js
+
+          else
+            echo "Unsupported language"
+            exit 1
+          fi
+      - name: Print Result
+        run: echo "Prueba efectuada con éxito"
