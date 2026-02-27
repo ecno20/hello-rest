@@ -32,7 +32,7 @@ jobs:
       run: mvn -B package --file pom.xml
           
     - name: Print exit
-      run: echo "Prueba efectuada con éxito"
+      run: echo "Prueba efectuada con éxito_Test"
 
    # - name: Publish to GitHub Packages Apache Maven
    #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
