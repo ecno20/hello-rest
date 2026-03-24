@@ -3,10 +3,11 @@
 name: CI - Multi Language
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# Se Comenta para efectuar pruebas  
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
