@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-rest-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-rest
+  template:
+    metadata:
+      labels:
+        app: hello-rest
+    spec:
+      containers:
+        - name: hello-rest-container
+          image: ecno20/hello-rest-app-user4:latest
+          ports:
+            - containerPort: 8080

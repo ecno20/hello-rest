@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-rest-service
+spec:
+  selector:
+    app: hello-rest
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
