@@ -30,6 +30,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>hello-rest</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
