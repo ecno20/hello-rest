@@ -5,3 +5,7 @@
 ## Status badge
 
 [![CI Caller](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml)
+
+## Ci-Caller
+
+[![CI Caller](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml)
