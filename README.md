@@ -13,3 +13,7 @@
 ## Ci-Caller-Rollback
 
 [![CI Caller](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml)
+
+## Ci-Caller-Deploy-latest version
+
+[![CI Caller](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/hello-rest/actions/workflows/ci.yml)
